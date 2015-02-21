@@ -1,0 +1,566 @@
+#map-canvas {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.outerMap {
+    padding: 1em 0 5em 0;
+}
+.parts {
+    opacity: 0;
+}
+.visible {
+    opacity: 1;
+}
+/* line 3, assetic_compassuP4Get.sass */
+body {
+    margin: 0;
+    background-color: #22252b;
+    font: 12px/15px Arial, Helvetica, sans-serif;
+    min-width: 978px;
+}
+
+@font-face {
+    font-family: "pts56f-webfont";
+    src: url("../fonts/pts56f-webfont.eot");
+    src: url("../fonts/pts56f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pts56f-webfont.woff") format("woff"), url("../fonts/pts56f-webfont.ttf") format("truetype"), url("../fonts/pts56f-webfont.svg#svgFontName") format("svg");
+}
+@font-face {
+    font-family: "myriadpro-regular-webfont";
+    src: url("../fonts/myriadpro-regular-webfont.eot");
+    src: url("../fonts/myriadpro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/myriadpro-regular-webfont.woff") format("woff"), url("../fonts/myriadpro-regular-webfont.ttf") format("truetype");
+}
+@font-face {
+    font-family: "arvil_sans-webfont";
+    src: url("../fonts/arvil_sans-webfont.woff") format("woff"), url("../fonts/arvil_sans-webfont.ttf") format("truetype");
+}
+@font-face {
+    font-family: "pts75f-webfont";
+    src: url("../fonts/pts75f-webfont.eot");
+    src: url("../fonts/pts75f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pts75f-webfont.woff") format("woff"), url("../fonts/pts75f-webfont.ttf") format("truetype"), url("../fonts/pts75f-webfont.svg#svgFontName") format("svg");
+}
+@font-face {
+    font-family: "ptc55f-webfont";
+    src: url("../fonts/ptc55f-webfont.eot");
+    src: url("../fonts/ptc55f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ptc55f-webfont.woff") format("woff"), url("../fonts/ptc55f-webfont.ttf") format("truetype"), url("../fonts/ptc55f-webfont.svg#svgFontName") format("svg");
+}
+/* line 40, assetic_compassuP4Get.sass */
+img {
+    border-style: none;
+}
+
+/* line 43, assetic_compassuP4Get.sass */
+a {
+    text-decoration: none;
+    color: #65676B;
+}
+/* line 46, assetic_compassuP4Get.sass */
+a:hover {
+    text-decoration: underline;
+}
+
+/* line 49, assetic_compassuP4Get.sass */
+input, textarea, select {
+    font: 100% Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+    color: #000;
+}
+
+/* line 54, assetic_compassuP4Get.sass */
+a:focus, input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+/* line 57, assetic_compassuP4Get.sass */
+form, fieldset {
+    margin: 0;
+    padding: 0;
+    border-style: none;
+}
+
+/* line 62, assetic_compassuP4Get.sass */
+q {
+    quotes: none;
+}
+/* line 64, assetic_compassuP4Get.sass */
+q:before, q:after {
+    content: "";
+}
+
+/* line 67, assetic_compassuP4Get.sass */
+#wrapper {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+/* header */
+/* line 74, assetic_compassuP4Get.sass */
+#header {
+    padding: 27px 50px 103px;
+}
+/* line 76, assetic_compassuP4Get.sass */
+#header .top-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 80px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "ptc55f-webfont";
+}
+/* line 84, assetic_compassuP4Get.sass */
+#header .top-nav li {
+    display: inline;
+    line-height: 18px;
+    background: url(../img/bullet-01.png) no-repeat 7px 3px;
+    padding: 0 1px 0 28px;
+}
+/* line 89, assetic_compassuP4Get.sass */
+#header .top-nav li:first-child {
+    background: none;
+}
+/* line 91, assetic_compassuP4Get.sass */
+#header .top-nav li a {
+    color: #5d5f63;
+}
+/* line 93, assetic_compassuP4Get.sass */
+#header .top-nav li a:hover {
+    text-decoration: none;
+    color: #92b3d5;
+}
+/* line 96, assetic_compassuP4Get.sass */
+#header .top-nav li .color:hover {
+    color: #5e6f82;
+}
+/* line 98, assetic_compassuP4Get.sass */
+#header .logo {
+    margin: 0 0 49px 0;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 100px;
+    font-family: "arvil_sans-webfont";
+    letter-spacing: 9px;
+    white-space: nowrap;
+    text-align: center;
+}
+/* line 107, assetic_compassuP4Get.sass */
+#header .logo a {
+    display: block;
+    height: 100%;
+    color: #e6e6e6;
+    text-decoration: none;
+}
+/* line 112, assetic_compassuP4Get.sass */
+#header .slogan {
+    display: block;
+    text-align: center;
+    background: url(../img/bullet-02.png) no-repeat 50% 0;
+    padding: 98px 0 0;
+    font-weight: normal;
+    font-family: "pts75f-webfont";
+    color: #8f8f8f;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+/* end header */
+/* main */
+/* line 128, assetic_compassuP4Get.sass */
+#main {
+    padding: 0 173px 80px;
+}
+/* line 130, assetic_compassuP4Get.sass */
+#main .profile {
+    padding: 0 0 59px;
+}
+/* line 132, assetic_compassuP4Get.sass */
+#main .profile .title {
+    background: url(../img/separator-01.png) repeat-x;
+    padding: 13px 0 0;
+    margin: 0 0 50px;
+
+}
+
+/* line 136, assetic_compassuP4Get.sass */
+#main .profile h2 {
+
+    background: url(../img/separator-01.png) repeat-x 0 100%;
+    padding: 0 0 12px;
+    text-align: center;
+    font-family: "arvil_sans-webfont";
+    font-size: 60px;
+    line-height: 64px;
+    color: #e6e6e6;
+    margin: 0;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+/* line 147, assetic_compassuP4Get.sass */
+#main .profile .holder {
+    width: 100%;
+}
+/* line 149, assetic_compassuP4Get.sass */
+#main .profile .holder:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* line 153, assetic_compassuP4Get.sass */
+#main .profile dl {
+    margin: 0;
+    overflow: hidden;
+    line-height: 22px;
+    width: 675px;
+    float: left;
+}
+/* line 159, assetic_compassuP4Get.sass */
+#main .profile dl dt {
+    float: left;
+    width: 105px;
+    padding: 0 5px 0 0;
+    font-size: 11px;
+    color: #65676b;
+    text-transform: uppercase;
+    font-family: "pts75f-webfont";
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+/* line 169, assetic_compassuP4Get.sass */
+#main .profile dl dd {
+    overflow: hidden;
+    margin: 0;
+    color: #e6e6e6;
+    font-size: 14px;
+    font-family: "ptc55f-webfont";
+    padding: 0 0 22px;
+}
+/* line 176, assetic_compassuP4Get.sass */
+#main .profile dl dd a {
+    color: #e6e6e6;
+}
+/* line 178, assetic_compassuP4Get.sass */
+#main .profile dl .social {
+    list-style: none;
+    margin: 0 0 0 -7px;
+    padding: 0;
+    overflow: hidden;
+}
+/* line 184, assetic_compassuP4Get.sass */
+#main .profile .social li {
+    float: left;
+    padding: 0 21px 0 7px;
+    background: url(../img/bullet-03.gif) no-repeat 100% 7px;
+}
+/* line 188, assetic_compassuP4Get.sass */
+#main .profile .social .color-01 {
+    color: #f64599;
+}
+/* line 190, assetic_compassuP4Get.sass */
+#main .profile .social .color-02 {
+    color: #f7911f;
+}
+/* line 192, assetic_compassuP4Get.sass */
+#main .profile .social .color-03 {
+    color: #2eb8e7;
+}
+/* line 194, assetic_compassuP4Get.sass */
+#main .profile .social .color-04 {
+    color: #dd4b39;
+}
+/* line 196, assetic_compassuP4Get.sass */
+#main .profile .social .color-05 {
+    color: #5574ad;
+}
+/* line 198, assetic_compassuP4Get.sass */
+#main .profile .social .color-06 {
+    color: #7ca935;
+}
+/* line 200, assetic_compassuP4Get.sass */
+#main .profile .social .color-07 {
+    color: #d6156c;
+}
+/* line 202, assetic_compassuP4Get.sass */
+#main .profile .social .color-08 {
+    color: #3c3c94;
+}
+/* line 204, assetic_compassuP4Get.sass */
+#main .profile .social .color-09 {
+    color: #f11e1f;
+}
+/* line 206, assetic_compassuP4Get.sass */
+#main .profile .social .color-10 {
+    color: #00aff0;
+}
+/* line 208, assetic_compassuP4Get.sass */
+#main .profile .photo-holder {
+    float: right;
+    width: 253px;
+    height: 257px;
+    background: url(../img/bg-photo-holder.png) no-repeat;
+    margin: -5px -131px 0 0;
+    padding: 12px 0 0 24px;
+}
+/* line 216, assetic_compassuP4Get.sass */
+#main .profile .photo-holder img {
+    vertical-align: top;
+    -moz-border-radius: 106px;
+    -webkit-border-radius: 106px;
+    border-radius: 106px;
+    position: relative;
+}
+/* line 222, assetic_compassuP4Get.sass */
+#main .experience {
+    padding: 0 0 35px;
+}
+/* line 224, assetic_compassuP4Get.sass */
+#main .experience .title {
+    background: url(../img/separator-01.png) repeat-x;
+    padding: 15px 0 0;
+    margin: 0 0 52px;
+}
+/* line 228, assetic_compassuP4Get.sass */
+#main .section .title {
+    background: url(../img/separator-01.png) repeat-x;
+    padding: 15px 0 0;
+    margin: 0 0 52px;
+}
+/* line 232, assetic_compassuP4Get.sass */
+#main .experience .title h2 {
+    background: url(../img/separator-01.png) repeat-x 0 100%;
+    padding: 0 0 10px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 64px;
+    color: #e6e6e6;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: "arvil_sans-webfont";
+    letter-spacing: 3px;
+}
+/* line 244, assetic_compassuP4Get.sass */
+#main .section .title h2 {
+    background: url(../img/separator-01.png) repeat-x 0 100%;
+    padding: 0 0 10px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 64px;
+    color: #e6e6e6;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: "myriadpro-regular-webfont";
+    letter-spacing: 3px;
+    font-family: "arvil_sans-webfont";
+}
+/* line 257, assetic_compassuP4Get.sass */
+#main .experience dl, #main .section dl {
+    overflow: hidden;
+    margin: 0;
+    font-size: 12px;
+    line-height: 22px;
+}
+/* line 262, assetic_compassuP4Get.sass */
+#main .experience dl dt, #main .section dl dt {
+    float: left;
+    width: 105px;
+    letter-spacing: 1px;
+    text-align: left;
+    padding: 0 5px 0 0;
+    font-family: "pts75f-webfont";
+    color: #66686c;
+    text-transform: uppercase;
+}
+/* line 271, assetic_compassuP4Get.sass */
+#main .experience dl dt span, #main .section dl dt span {
+    display: block;
+}
+/* line 273, assetic_compassuP4Get.sass */
+#main .experience dl dd, #main .section dl dd {
+    overflow: hidden;
+    padding: 0 0 46px;
+    font-family: "ptc55f-webfont";
+    font-size: 14px;
+    color: #d3d3d5;
+    margin: 0;
+}
+/* line 280, assetic_compassuP4Get.sass */
+#main .experience dl p, #main .section dl p {
+    margin: 0;
+}
+/* line 282, assetic_compassuP4Get.sass */
+#main .experience dl dd .row, #main .section dl dd .row {
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+    font-family: "pts75f-webfont";
+    padding: 0 0 1px;
+}
+/* line 288, assetic_compassuP4Get.sass */
+#main .experience dl dd .row span, #main .section dl dd .row span {
+    background: url(../img/bullet-03.png) no-repeat 8px 5px;
+    padding: 0 0 0 24px;
+    color: #6195cb;
+    font-family: "pts56f-webfont";
+}
+/* line 294, assetic_compassuP4Get.sass */
+#main .experience dl dd .link {
+    font-size: 12px;
+    padding: 0 0 21px;
+}
+/* line 297, assetic_compassuP4Get.sass */
+#main .experience .link a {
+    color: #65676b;
+}
+/* line 299, assetic_compassuP4Get.sass */
+#main .section em {
+    display: block;
+    font-style: normal;
+    font-size: 14px;
+    color: #65676b;
+    padding: 0 0 21px;
+}
+
+/* end main */
+/* footer */
+/* line 309, assetic_compassuP4Get.sass */
+#footer {
+    width: 990px;
+    margin: 0 auto;
+}
+/* line 313, assetic_compassuP4Get.sass */
+#footer .footer-holder {
+    padding: 98px 20px 40px;
+    text-align: center;
+    font-family: "ptc55f-webfont";
+    font-size: 13px;
+    color: #47494d;
+    text-transform: uppercase;
+}
+
+/* line 322, assetic_compassuP4Get.sass */
+* + html #footer .footer-holder {
+    padding: 100px 20px 40px;
+}
+
+/* line 325, assetic_compassuP4Get.sass */
+#footer p {
+    margin: 0;
+}
+/* line 327, assetic_compassuP4Get.sass */
+#footer p span {
+    font-family: "pts75f-webfont";
+}
+
+/* end footer */
+@media(max-width:640px) {
+    /* line 334, assetic_compassuP4Get.sass */
+    #wrapper, #header .logo, #main .profile dl, #main .profile .photo-holder, #footer {
+        width: auto;
+        float: none;
+    }
+
+    /* line 338, assetic_compassuP4Get.sass */
+    dl dd, dl dt, .logo a {
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+
+    /* line 343, assetic_compassuP4Get.sass */
+    body {
+        min-width: 150px;
+    }
+
+    /* line 347, assetic_compassuP4Get.sass */
+    #wrapper {
+        background: #22252b none;
+    }
+
+    /* line 350, assetic_compassuP4Get.sass */
+    #header {
+        padding: 25px 15px 78px;
+    }
+    /* line 353, assetic_compassuP4Get.sass */
+    #header .top-nav {
+        font-size: 12px;
+        padding: 0 0 42px 0;
+    }
+    /* line 357, assetic_compassuP4Get.sass */
+    #header .top-nav li {
+        padding: 0 1px 0 18px;
+        background-position: 2px 3px;
+    }
+    /* line 361, assetic_compassuP4Get.sass */
+    #header .top-nav li:first-child {
+        padding-left: 0;
+    }
+    /* line 364, assetic_compassuP4Get.sass */
+    #header .logo {
+        margin: 0 auto 40px;
+        white-space: normal;
+        text-align: center;
+        letter-spacing: 7px;
+        font-size: 50px;
+        line-height: 55px;
+    }
+    /* line 372, assetic_compassuP4Get.sass */
+    #header .slogan {
+        padding-top: 80px;
+    }
+
+    /* line 375, assetic_compassuP4Get.sass */
+    #main {
+        padding: 0 15px 40px;
+    }
+    /* line 378, assetic_compassuP4Get.sass */
+    #main .title h2,
+    #main .experience .title h2,
+    #main .section .title h2 {
+        font-size: 46px;
+        line-height: 46px;
+        font-family: "arvil_sans-webfont";
+    }
+    /* line 385, assetic_compassuP4Get.sass */
+    #main .title, #main .experience .title, #main .section .title {
+        padding: 13px 0 0;
+    }
+    /* line 388, assetic_compassuP4Get.sass */
+    #main .profile dl dt {
+        width: 95px;
+    }
+    /* line 392, assetic_compassuP4Get.sass */
+    #main .profile .photo-holder {
+        min-height: 257px;
+        height: auto;
+        margin: auto;
+        padding-left: 0;
+        background-position: 50% 0;
+    }
+    /* line 399, assetic_compassuP4Get.sass */
+    #main .profile img {
+        display: block;
+        margin: 0 auto;
+    }
+    /* line 403, assetic_compassuP4Get.sass */
+    #main .experience dl dt,
+    #main .section dl dt {
+        width: 105px;
+        padding: 0 25px 0 0;
+    }
+
+    /* line 408, assetic_compassuP4Get.sass */
+    #footer {
+        background: #191b20 none;
+    }
+
+    /* line 410, assetic_compassuP4Get.sass */
+    #footer p {
+        max-width: 186px;
+        margin: 0 auto;
+    }
+}
