@@ -5306,7 +5306,9 @@ a.list-group-item-danger.active:focus {
 .panel-title {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 17px;
+    font-size: x-large;
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
 }
 .panel-title > a,
 .panel-title > small,
