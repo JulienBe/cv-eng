@@ -1,0 +1,55 @@
+.header {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.panel-title {
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+}
+
+.date {
+    font-weight: bold;
+    color: #aaa;
+    text-align: center;
+}
+
+.discrete {
+    text-decoration: none;
+    color: inherit;
+}
+
+.company {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.job {
+    text-align: center;
+    color: #00aff0;
+}
+
+.description {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+strong {
+    color: #00aff0;
+}
+
+.btn {
+    color: #00aff0;
+}
+
+.panel {
+    opacity: 0;
+}
