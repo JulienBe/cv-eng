@@ -87,7 +87,7 @@
                       For that I am using daily technologies such as :
                         <strong>Java7</strong>, <strong>JBoss EAP 6.2</strong>, <strong>Bash</strong>, <strong>EJB</strong>, <strong>MySQL</strong>, <strong>Hibernate ORM</strong>
                         <strong>Mockito</strong>, <strong>JUnit</strong>, <strong>SoapUI</strong>,
-                        <strong>Docker</strong>, <strong>Jenkins</strong>, <strong>CentOS</strong>, <strong>Eclipse</strong>, <strong>Git</strong>, <strong>xml</strong>, <strong>Sonar</strong> (I love metrics)
+                        <strong>Docker</strong>, <strong>Jenkins</strong>, <strong>CentOS</strong>, <strong>Eclipse</strong>, <strong>Git</strong>, <strong>Sonar</strong> (I love metrics)
                     </p>
                 </dd>
             </dl>
@@ -217,35 +217,45 @@
                         <span>IEPSCF, 4 years and evening courses.</span>
                     </p>
                     <ul>
-                        <li>Class Rank: 1.</li>
+                        <li>High honors.</li>
+                        <li>Award of excellence.</li>
                     </ul>
                 </dd>
             </dl>
         </div>
         <div class="section">
             <div class="title parts">
-                <h2>TL;DR</h2>
+                <h2>Location - Availability</h2>
+            </div>
+            <div class="outerMap">
+                <div class="shadow">
+                    <div id="map-canvas" class="parts" ></div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="title parts">
+                <h2>Other</h2>
             </div>
             <dl>
                 <dd>
-                    <p class="parts">
-                      Passionnate about development and tech in general
-                    </p>
+                    <p class="parts">During my free time, I discover new languages, frameworks or techniques.</p>
+                    <br/>
+                    <br/>
 
+                    <p class="parts">Examples : </p>
                     <ul>
-                        <li class="parts">
-                          <strong>Languages</strong> : Java, Scala, Groovy
-                        </li>
-                        <li class="parts">
-                          <strong>Tools</strong> : Docker, JBoss, MySQL, Git, IntelliJ, Eclipse, Bash/Zsh, Sonar
-                        </li>
-                        <li class="parts">
-                          <strong>Frameworks</strong> : JUnit, Mockito,
-                        </li>
-                        <li class="parts">
-                          <strong>OS</strong> : At work Linux - CentOS, at home Linux - Manjaro
-                        </li>
+                        <li class="parts">With libGDX, I developed some games with a modular architecture which allows me to rapidly expand those applications or to reuse the majority of the code.
+                            I have also focused on performances to be able to use a large number of particles. These games are available <a href="https://play.google.com/store/apps/developer?id=Julien+Bertozzi">on Android</a></li>
+                        <br/>
+                        <li class="parts">I have developed pet health record using Groovy and Grails. Still in development, the goal of this application is to keep track of a pet vet records, predict future needs and send reminders via emails. Available <a href="http://peaceful-tundra-1058.herokuapp.com/">on
+                            Heroku (Login : Bertozzi Pass : LAN)</a></li>
+                        <br/>
+                        <li class="parts">I've recently entered an AI contest and was ranked 22/1080. The code is available <a href="https://github.com/JulienBe/PlatiniumRiftJavaV2/blob/master/src/Player.java">on GitHub</a> </li>
                     </ul>
+                    <br/>
+
+                    <p class="parts">Generally speaking, I have a keen interest for new technologies.</p>
                 </dd>
             </dl>
         </div>
@@ -263,6 +273,98 @@
     </div>
 </div>
 
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+    function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var homePos = new google.maps.LatLng(50.378356, 4.898910);
+        var mapOptions = {
+            center: new google.maps.LatLng(50.248356, 4.898910),
+            zoom: 9,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var myHome = new google.maps.Marker({ position: homePos, map: map, title:"Home", visible:true});
+
+        var reachableCoords = [
+                // Boussu
+            new google.maps.LatLng(50.437988, 3.824079),
+                // Louvroil
+            new google.maps.LatLng(50.256586, 3.942182),
+                // L'Helpe Majeure
+            new google.maps.LatLng(50.1291268, 3.939848),
+                // Hirson
+            new google.maps.LatLng(49.910535, 4.102525),
+                // Charleville-Mézières
+            new google.maps.LatLng(49.7359994, 4.7230385),
+                // Mouzon
+            new google.maps.LatLng(49.655321, 5.096874),
+                // Rouvroy
+            new google.maps.LatLng(49.6066829, 5.5988459),
+                // Musson
+            new google.maps.LatLng(49.59862, 5.814494),
+                // Arlon
+            new google.maps.LatLng(49.68093, 5.805356),
+                // Attert
+            new google.maps.LatLng(49.7479718, 5.7730322),
+                // Rambrouch
+            new google.maps.LatLng(49.8318207, 5.8468093),
+                // Wolz
+            new google.maps.LatLng(49.9660935, 5.9320416),
+                // Alberon
+            new google.maps.LatLng(50.06622, 5.932695),
+                // Gouvy - Ca aussi c'est joli, et en sortant à Tenneville ça ferait une jolie route
+            new google.maps.LatLng(50.06622, 5.932695),
+                // Entre les deux
+            new google.maps.LatLng(50.15622, 5.882695),
+                // Vielsalm, encore un bled sympa, surtout le long de l'eau
+            new google.maps.LatLng(50.2849024,5.9136369),
+                // Stavelot, Ca aussi c'est une chouette route.
+            new google.maps.LatLng(50.3846894,5.8767537),
+                // Stoumont pas loin
+            new google.maps.LatLng(50.41190,5.835359),
+                // Spa
+            new google.maps.LatLng(50.4981489,5.871982),
+                // Eupen
+            new google.maps.LatLng(50.63258,6.032539),
+                // Aubel
+            new google.maps.LatLng(50.7039342,5.8581431),
+                // Visé
+            new google.maps.LatLng(50.7405542,5.7013751),
+                // Frontière - Maastricht
+            new google.maps.LatLng(50.8276561,5.6301927),
+                // Hasselt  - Pourquoi pas ?
+            new google.maps.LatLng(50.9222008,5.3227634),
+                // Herk-de-Stad - Le nom fait pas envie, m'enfin google dit 1h20 - Attention aux flash sur la route de Hannut
+            new google.maps.LatLng(50.9409622,5.1714856),
+                // Leuven - Autant prendre large pour les bouchons
+            new google.maps.LatLng(50.8785603,4.7055266),
+                // Bruxelles
+            new google.maps.LatLng(50.8524551,4.4158627),
+                // Bruxelles
+            new google.maps.LatLng(50.7943435,4.3047223),
+                // Rebecq
+            new google.maps.LatLng(50.675196,4.1358012),
+                // Soignies
+            new google.maps.LatLng(50.5835483,4.0722104),
+        ];
+
+        // Construct the polygon.
+        var reachable = new google.maps.Polygon({
+            paths: reachableCoords,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35
+        });
+
+        reachable.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('.tlt').textillate({
